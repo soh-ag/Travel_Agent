@@ -27,7 +27,7 @@ if not BASE_URL or not API_KEY or not MODEL_NAME:
     
 
 client = AsyncOpenAI(base_url=BASE_URL, api_key=API_KEY)
-set_tracing_disabled(disabled=True)
+# set_tracing_disabled(disabled=True)
     
 # --- Models for structured outputs ---
 class FlightRecommendation(BaseModel):

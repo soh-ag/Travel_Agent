@@ -9,7 +9,10 @@ from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 from openai import AsyncOpenAI
 from agents import Agent, OpenAIChatCompletionsModel, Runner, function_tool, set_tracing_disabled,Runner , ModelSettings, InputGuardrail, GuardrailFunctionOutput, InputGuardrailTripwireTriggered,RunContextWrapper
+import logfire
 
+logfire.configure()
+logfire.instrument_openai_agents()
 # Load environment variables
 load_dotenv()
 
